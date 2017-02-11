@@ -1,0 +1,21 @@
+<template name="heatmap">
+	<div class="map-container">
+    {{> googleMap name="heatmap" options=mapOptions}}
+  </div>
+	<h4 class="center">Too many matches? Limit by area.</h4>
+	<div class="map-buttons">
+		<div class="navigation--left">
+			<a href="#" class="button button-prev-js button--previous">Previous question</a>
+		</div>
+		<div class="location">
+			<label>Location:</label>
+			<input type="text" placeholder="Post code" class="postcode" />
+			<label> Within:</label>
+			<input type="text" placeholder="2000" class="distance" />
+			<span>m</span>
+		</div>
+		<div class="navigation--right">
+			<a href="#" class="button button-matches-js">Search</a>
+		</div>
+	</div>
+</template>

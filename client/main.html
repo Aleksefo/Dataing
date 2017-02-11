@@ -1,0 +1,126 @@
+<head>
+  <title>dating</title>
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
+
+<body>
+  {{>main}}
+</body>
+
+<template name="main">
+  {{#if first}}
+    <div class="topbar topbar-first">
+      <div class="logo logo-first"></div>
+    </div>
+  {{else}}
+    {{#if matches}}
+      <div class="topbar topbar-dark">
+        <div class="logo"></div>
+        <h4 class="">56 active potential romances within 8km of you!</h4>
+        <div class="topbar--right">
+          <a href="#" class="button button-prev-js">Edit area search</a>
+        </div>
+      </div>  
+    {{else}}
+      <div class="topbar">
+        <div class="logo"></div>
+        <h4 class="">Where's your love?</h4>
+        <div class="topbar--right"></div>
+      </div>
+    {{/if}}
+  {{/if}}
+  {{#unless dismiss}}
+    <h1 class="center">Welcome to Dataing! Did you know that there are 5 498 450 Finns out there? We know about 70% of them.</h1>
+    <a href="#" class="button button--start button-dismiss-js">Let's find my matches!</a>
+    <div class="statistics">
+      <div class="stat">
+        <h3>243 950 urban middle-age men with money to spend and no children to put to bed</h3>
+      </div>
+      <div class="stat">
+        <h3>147 250 unmarried women still holding out for the perfect guy</h3>
+      </div>
+      <div class="stat">
+        <h3>746 702 Finns have their own sauna</h3>
+      </div>
+      <div class="stat">
+        <h3>1 421 456 live on their own</h3>
+      </div>
+    </div> 
+  {{else}}
+    {{#unless matches}}
+      {{#if moreQuestions}}
+        <div class="navigation--left">
+        {{#unless first}}
+          <a href="#" class="button button-prev-js button--previous">Previous question</a>
+        {{/unless}} 
+        </div>
+        <div class="navigation--right">
+          <a href="#" class="button button-next-js button--darker">Very important</a>
+          <a href="#" class="button button-next-js">Kinda important</a>
+          <a href="#" class="button button-next-js button--lighter">Not important</a>
+        </div>
+        {{> chart title=text}}
+      {{else}}
+        {{> heatmap}}
+      {{/if}}
+    {{else}}
+      {{> matchcards}}
+    {{/unless}}
+  {{/unless}}
+  {{#unless matches}}
+    {{> footer}}
+  {{/unless}}
+</template>
+
+<template name="matchcards">
+  <div class="matches">
+    <div class="match">
+      <div class="match--image">
+        <img src="images-01.jpg"/>
+      </div>
+      <div class="match--details">
+        <span class="match--age">24 years old</span>
+        <span class="match--distance">3 km away</span>
+        <span class="match--name">Katariina</span>
+        <span class="match--desc">Heey, would love to hear from you! xx</span>
+        <div class="match--contact"><a href="#" class="button">Sign-up / in to send a message</a></div>
+      </div>
+    </div>
+    <div class="match">
+      <div class="match--image">
+        <img src="images-02.jpg"/>
+      </div>
+      <div class="match--details">
+        <span class="match--age">23 years old</span>
+        <span class="match--distance">7 km away</span>
+        <span class="match--name">Anna</span>
+        <span class="match--desc">What's uuupp?</span>
+        <div class="match--contact"><a href="#" class="button">Sign-up / in to send a message</a></div>
+      </div>
+    </div>
+    <div class="match">
+      <div class="match--image">
+        <img src="images-03.jpg"/>
+      </div>
+      <div class="match--details">
+        <span class="match--age">22 years old</span>
+        <span class="match--distance">4 km away</span>
+        <span class="match--name">Pauliina</span>
+        <span class="match--desc">Tell me something fun!</span>
+        <div class="match--contact"><a href="#" class="button">Sign-up / in to send a message</a></div>
+      </div>
+    </div>
+    <div class="match">
+      <div class="match--image">
+        <img src="images-01.jpg"/>
+      </div>
+      <div class="match--details">
+        <span class="match--age">24 years old</span>
+        <span class="match--distance">3 km away</span>
+        <span class="match--name">Katariina</span>
+        <span class="match--desc">Heey, would love to hear from you! xx</span>
+        <div class="match--contact"><a href="#" class="button">Sign-up / in to send a message</a></div>
+      </div>
+    </div>
+  </div>
+</template>

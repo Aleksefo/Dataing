@@ -1,0 +1,18 @@
+<template name="chart">
+<h2 class="center">{{title}}</h2>
+<div class="chart-container">
+	{{#each options}}
+		<div class="bar" style="width:{{colwidth}}%;" data-index="{{index}}">
+			<div class="progress" style="height:{{value}}%;">
+				<svg id="progress--checkmark" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+				  <g>
+				    <circle class="cls-1" cx="20" cy="20" r="16"/>
+				    <polyline class="cls-2" points="12 20.34 17.66 26 28.97 14.69"/>
+				  </g>
+				</svg>
+			</div>
+			<label>{{label}}</label>
+		</div>
+	{{/each}}
+</div>
+</template>
