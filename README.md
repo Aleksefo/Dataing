@@ -6,4 +6,4 @@ to use and learn during 3 days of the hackathon.
 
 Unfortunately app doesn't have access to Bisnode's API anymore, but here's the demonstration video:
 
-<a #href=https://youtu.be/vpEkt54naUw>https://youtu.be/vpEkt54naUw</a>
+[![Alt text](https://img.youtube.com/vi/vpEkt54naUw/0.jpg)](https://www.youtube.com/watch?v=vpEkt54naUw)
